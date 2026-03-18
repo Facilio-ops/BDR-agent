@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>BDR Account Book — UK Team</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=DM+Sans:wght@400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0d0d0d;--ink2:#3a3a3a;--ink3:#6b6b6b;--ink4:#ababab;
+  --bg:#f4f2ed;--bg2:#eae8e2;--sf:#faf9f6;
+  --acc:#1a4de8;--acl:#eaeffd;--bdr:#d6d2c8;
+  --grn:#1a7a4a;--gnb:#e6f4ec;
+}
+html,body{height:100%;background:var(--bg);color:var(--ink);font-family:"DM Sans",sans-serif}
+body{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:32px 20px}
+
+.logo{display:flex;align-items:center;gap:12px;margin-bottom:40px}
+.lm{width:40px;height:40px;background:var(--acc);border-radius:10px;display:flex;align-items:center;justify-content:center}
+.lm svg{width:20px;height:20px}
+.logo-title{font-family:"Syne",sans-serif;font-size:20px;font-weight:700;color:var(--ink)}
+.logo-sub{font-size:12px;color:var(--ink3);font-family:"DM Mono",monospace;margin-top:2px}
+
+h1{font-family:"Syne",sans-serif;font-size:28px;font-weight:700;color:var(--ink);text-align:center;margin-bottom:10px;letter-spacing:-0.3px}
+.subtitle{font-size:15px;color:var(--ink3);text-align:center;margin-bottom:40px;line-height:1.6}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;width:100%;max-width:760px}
+
+.bdr-card{background:var(--sf);border:1px solid var(--bdr);border-radius:14px;padding:22px 20px;cursor:pointer;text-decoration:none;color:inherit;transition:all 0.15s;display:flex;flex-direction:column;gap:14px}
+.bdr-card:hover{border-color:var(--acc);box-shadow:0 4px 20px rgba(26,77,232,0.1);transform:translateY(-2px)}
+
+.bdr-top{display:flex;align-items:center;gap:12px}
+.avatar{width:42px;height:42px;border-radius:50%;background:var(--acc);color:#fff;font-family:"Syne",sans-serif;font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.bdr-info{}
+.bdr-name{font-family:"Syne",sans-serif;font-size:15px;font-weight:600;color:var(--ink)}
+.bdr-role{font-size:12px;color:var(--ink3);margin-top:2px}
+
+.bdr-stats{display:flex;gap:8px;flex-wrap:wrap}
+.stat{font-family:"DM Mono",monospace;font-size:10px;padding:3px 8px;border-radius:20px;font-weight:500}
+.stat-blue{background:var(--acl);color:var(--acc)}
+.stat-green{background:var(--gnb);color:var(--grn)}
+
+.bdr-footer{display:flex;align-items:center;justify-content:space-between}
+.open-label{font-size:12.5px;color:var(--acc);font-weight:500}
+.arrow{width:20px;height:20px;background:var(--acl);border-radius:6px;display:flex;align-items:center;justify-content:center}
+.arrow svg{width:11px;height:11px}
+
+.footer-note{margin-top:36px;font-family:"DM Mono",monospace;font-size:11px;color:var(--ink4);text-align:center}
+</style>
+</head>
+<body>
+
+<div class="logo">
+  <div class="lm">
+    <svg viewBox="0 0 17 17" fill="none"><rect x="2" y="2" width="5.5" height="5.5" rx="1.5" fill="white" opacity=".9"/><rect x="9.5" y="2" width="5.5" height="5.5" rx="1.5" fill="white" opacity=".6"/><rect x="2" y="9.5" width="5.5" height="5.5" rx="1.5" fill="white" opacity=".6"/><rect x="9.5" y="9.5" width="5.5" height="5.5" rx="1.5" fill="white"/></svg>
+  </div>
+  <div>
+    <div class="logo-title">Account Book</div>
+    <div class="logo-sub">BDR Intelligence · UK Team</div>
+  </div>
+</div>
+
+<h1>Select your account book</h1>
+<p class="subtitle">Each agent knows your full account list and can research<br/>companies, find signals, and help you prioritise your day.</p>
+
+<div class="grid">
+
+  <a class="bdr-card" href="anjana.html">
+    <div class="bdr-top">
+      <div class="avatar">A</div>
+      <div class="bdr-info">
+        <div class="bdr-name">Anjana</div>
+        <div class="bdr-role">UK Region · Q1</div>
+      </div>
+    </div>
+    <div class="bdr-stats">
+      <span class="stat stat-blue">298 accounts</span>
+      <span class="stat stat-green">22 retained</span>
+    </div>
+    <div class="bdr-footer">
+      <span class="open-label">Open agent</span>
+      <div class="arrow"><svg viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M6 2.5l3 3-3 3" stroke="var(--acc)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    </div>
+  </a>
+
+  <!-- Add more BDR cards below as you onboard each one -->
+  <!-- Copy the block above, change the href, name, initial and stats -->
+
+  <div class="bdr-card" style="opacity:0.4;cursor:default;pointer-events:none">
+    <div class="bdr-top">
+      <div class="avatar" style="background:var(--ink3)">B</div>
+      <div class="bdr-info">
+        <div class="bdr-name">BDR 2</div>
+        <div class="bdr-role">Coming soon</div>
+      </div>
+    </div>
+    <div class="bdr-stats"><span class="stat stat-blue">— accounts</span></div>
+    <div class="bdr-footer"><span class="open-label" style="color:var(--ink4)">Not yet set up</span></div>
+  </div>
+
+  <div class="bdr-card" style="opacity:0.4;cursor:default;pointer-events:none">
+    <div class="bdr-top">
+      <div class="avatar" style="background:var(--ink3)">C</div>
+      <div class="bdr-info">
+        <div class="bdr-name">BDR 3</div>
+        <div class="bdr-role">Coming soon</div>
+      </div>
+    </div>
+    <div class="bdr-stats"><span class="stat stat-blue">— accounts</span></div>
+    <div class="bdr-footer"><span class="open-label" style="color:var(--ink4)">Not yet set up</span></div>
+  </div>
+
+  <div class="bdr-card" style="opacity:0.4;cursor:default;pointer-events:none">
+    <div class="bdr-top">
+      <div class="avatar" style="background:var(--ink3)">D</div>
+      <div class="bdr-info">
+        <div class="bdr-name">BDR 4</div>
+        <div class="bdr-role">Coming soon</div>
+      </div>
+    </div>
+    <div class="bdr-stats"><span class="stat stat-blue">— accounts</span></div>
+    <div class="bdr-footer"><span class="open-label" style="color:var(--ink4)">Not yet set up</span></div>
+  </div>
+
+  <div class="bdr-card" style="opacity:0.4;cursor:default;pointer-events:none">
+    <div class="bdr-top">
+      <div class="avatar" style="background:var(--ink3)">E</div>
+      <div class="bdr-info">
+        <div class="bdr-name">BDR 5</div>
+        <div class="bdr-role">Coming soon</div>
+      </div>
+    </div>
+    <div class="bdr-stats"><span class="stat stat-blue">— accounts</span></div>
+    <div class="bdr-footer"><span class="open-label" style="color:var(--ink4)">Not yet set up</span></div>
+  </div>
+
+</div>
+
+<div class="footer-note">Q1 2026 · UK Region · Powered by Claude</div>
+
+</body>
+</html>
