@@ -325,14 +325,9 @@ async function sendMessage() {
  
     // Agentic loop — keep going until no more tool calls
     while (true) {
-      var res = await fetch('https://api.anthropic.com/v1/messages', {
+      var res = await fetch('https://bdragent.riyas.workers.dev/api', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-api-key': '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',
-          'anthropic-version': '2023-06-01',
-          'anthropic-beta': 'web-search-2025-03-05'
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           model: 'claude-sonnet-4-20250514',
           max_tokens: 2000,
